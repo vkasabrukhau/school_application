@@ -39,7 +39,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="28dp"
         android:text="Information"
-        android:textColor="@color/black"
+        android:textColor="@color/teal_200"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
