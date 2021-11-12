@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.set_up_page.SetUpPage">
+
+    <!--Top Greeting Name Section-->
+    <TextView
+        android:id="@+id/setup_greeting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:text="Good Morning"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/setup_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Full Name"
+        android:textColor="#bdbdbd"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/setup_draw_icon"
+        app:layout_constraintTop_toBottomOf="@+id/setup_greeting_text" />
+
+    <ImageView
+        android:id="@+id/setup_draw_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:src="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_greeting_text" />
+
+    <!--Age Section-->
+    <TextView
+        android:id="@+id/setup_age_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Age"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_name_input" />
+
+    <TextView
+        android:id="@+id/setup_age_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="15"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_age_label_text" />
+
+    <Button
+        android:id="@+id/setup_add_age_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setup_age_content_text"
+        app:layout_constraintTop_toBottomOf="@+id/setup_age_label_text" />
+
+    <Button
+        android:id="@+id/setup_subtract_age_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/setup_age_content_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_age_label_text" />
+
+    <TextView
+        android:id="@+id/setup_estimated_grade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Estimated Grade: 10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_age_content_text" />
+
+
+    <!--Height Section-->
+    <TextView
+        android:id="@+id/setup_height_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Height"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_estimated_grade_text" />
+
+    <Button
+        android:id="@+id/setup_subtract_height_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/setup_height_feet_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_height_label_text" />
+
+
+    <TextView
+        android:id="@+id/setup_height_feet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="12dp"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_height_label_text" />
+
+    <TextView
+        android:id="@+id/setup_height_inches_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:text="10"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@id/setup_height_feet_text"
+        app:layout_constraintTop_toBottomOf="@+id/setup_height_label_text" />
+
+    <Button
+        android:id="@+id/setup_add_height_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setup_height_inches_text"
+        app:layout_constraintTop_toBottomOf="@+id/setup_height_label_text" />
+
+    <!--Weight Section-->
+    <TextView
+        android:id="@+id/setup_weight_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Weight"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_height_label_text" />
+
+    <Button
+        android:id="@+id/setup_subtract_weight_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/setup_weight_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_weight_label_text" />
+
+    <TextView
+        android:id="@+id/setup_weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="140"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_weight_label_text" />
+
+    <Button
+        android:id="@+id/setup_add_weight_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setup_weight_text"
+        app:layout_constraintTop_toBottomOf="@+id/setup_weight_label_text" />
+
+    <!--Submit Button-->
+    <Button
+        android:id="@+id/setup_submit_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/black"
+        android:text="Let's Go!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_weight_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

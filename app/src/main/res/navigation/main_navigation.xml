@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/setUpPage"
+        android:name="com.example.school_app.presentation.set_up_page.SetUpPage"
+        android:label="fragment_set_up_page"
+        tools:layout="@layout/fragment_set_up_page" />
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.school_app.presentation.home_page.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_briefingPage"
+            app:destination="@id/briefingPage" />
+        <action
+            android:id="@+id/action_homePage_to_classesPage"
+            app:destination="@id/classesPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/briefingPage"
+        android:name="com.example.school_app.presentation.briefing_page.BriefingPage"
+        android:label="fragment_briefing_page"
+        tools:layout="@layout/fragment_briefing_page" />
+    <fragment
+        android:id="@+id/frenchPage"
+        android:name="com.example.school_app.presentation.french_section.french_page.FrenchPage"
+        android:label="fragment_french_page"
+        tools:layout="@layout/fragment_french_page" >
+        <action
+            android:id="@+id/action_frenchPage_to_frenchMaterials"
+            app:destination="@id/frenchMaterials" />
+    </fragment>
+    <fragment
+        android:id="@+id/classesPage"
+        android:name="com.example.school_app.presentation.classes_page.ClassesPage"
+        android:label="fragment_classes_page"
+        tools:layout="@layout/fragment_classes_page" >
+        <action
+            android:id="@+id/action_classesPage_to_frenchPage"
+            app:destination="@id/frenchPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/frenchMaterials"
+        android:name="com.example.school_app.presentation.french_section.french_materials_page.FrenchMaterials"
+        android:label="fragment_french_materials"
+        tools:layout="@layout/fragment_french_materials" />
+</navigation>
